@@ -28,4 +28,6 @@ DialogGen
 clear 
 echo_red Rebooting now. press enter to reboot 
 read -p "Press enter to reboot. if you reboot to a terminal, report an issue and attempt the mod script to get to a desktop, then report an issue"
+echo_blue "If something goes wrong, you can drop me an email from tee909751@gmail.com and i can help from there"
+read -p "Press "y" to reboot"
 sudo reboot
