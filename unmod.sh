@@ -1,6 +1,6 @@
 #!/bin/bash
        print_error(
-                "WARNING: Your device has max98357a and can cause permanent damage to your speakers if you set the volume too loud!")
+                "WARNING: If you reboot or close terminal in the middle of the script, you might boot to a terminal. If you do, follow the mod.sh instructions and attempt the unmod.sh again!")
             user_input = input('Type "If i reboot  or close the terminal in the middle of the script, i will have to reinstall and lose my data": ')
             while user_input != "If i reboot  or close the terminal in the middle of the script, i will have to reinstall and lose my data":
                 user_input = input(
