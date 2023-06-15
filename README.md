@@ -5,3 +5,5 @@ sudo apt install git
 Once git is installed you'll need to do
 sudo git clone https://github.com/Samfire82/Galliumosmoddingscript.git and then cd Galliumosmoddingscript then ./mod.sh 
 Thats it! if you want to cancel simply reboot using Refresh+Power or closing terminal 
+
+If something goes wrong with the script, please report an issue and attempt the script again
