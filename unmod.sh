@@ -17,10 +17,10 @@ dialog --title "Add/Remove software" --msgbox 'Lets remove kde' 6 20
 DialogGen
 sudo apt remove kde-plasma-desktop* -y
 function DialogGen() { 
-dialog --title "Remove/Add Software" --msgbox 'Lets reinstall chromium' 6 20 
+dialog --title "Remove/Add Software" --msgbox 'Lets reinstall Chromium and remove FireFox' 6 20 
 }
 DialogGen
-sudo apt install chromium-browser -y
+sudo apt install chromium-browser -y && sudo apt remove firefox -y
 function DialogGen() { 
 dialog --title "Finished" --msgbox 'Time to reboot! if something went wrong, please report an issue' 6 20 
 }
