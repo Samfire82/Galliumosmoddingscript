@@ -1,6 +1,6 @@
 #!/bin/bash
 clear 
-function DialogGen() { 
+function dialoggen() { 
 dialog --title "Welcome" --msgbox 'Lets start modding galliumos' 6 20 
 }
 DialogGenfunction DialogGen() { 
