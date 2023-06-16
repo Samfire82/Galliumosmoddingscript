@@ -1,6 +1,8 @@
 #!/bin/bash
 clear 
-function dialoggen() { 
+echo_yellow We need to install a important tool,
+sudo apt install 1 dialog -y
+function DialogGen() { 
 dialog --title "Welcome" --msgbox 'Lets start modding galliumos' 6 20 
 }
 DialogGenfunction DialogGen() { 
