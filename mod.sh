@@ -37,3 +37,5 @@ read -p "Same as before, press y"
 sudo apt remove chromium-browser -y && sudo apt install firefox -y 
 clear 
 echo We are done! lets reboot, if you get to a terminal, re run the script and report an issue 
+read -p "Press y to reboot"
+sudo reboot 
