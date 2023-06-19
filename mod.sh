@@ -1,64 +1,39 @@
 #!/bin/bash
-clear 
-echo_yellow We need to install a important tool,
-sudo apt install 1 dialog -y
-function DialogGen() { 
-dialog --title "Welcome" --msgbox 'Lets start modding galliumos' 6 20 
-}
-DialogGenfunction DialogGen() { 
-dialog --title "Updates" --msgbox 'Lets update repositorys first' 6 20 
-}
-DialogGen
-sudo apt update -y 
+echo Wow, a new script. lets mod 
 clear
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'Lets start by removing chromium since it has issues' 6 20 
-}
-DialogGen
-sudo apt remove chromium-browser -y
+read -p "Press any key to continue"
+clear
+echo Right, you want to contiune. Are you sure
+clear
+read -p "If you are really ready, press y to contiune. RFS+PWR to exit"
+clear
+echo Press 1 to contiune
+clear
+read -p "Press 1 to contiune"
+echo Lets start by updating repo's
+sudo apt update -y
 clear 
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'Chromium is now gone, lets install FireFox' 6 20 
-}
-DialogGen
-sudo apt install firefox -y
+echo Repos look good, lets remove xfce4 and its packages
 clear 
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'FireFox installed with no errors, lets install a minimal version of plasma' 6 20 
-}
-DialogGen
-sudo apt install kde-plasma-desktop -y
+read -p "Press y to continue, REFRESH+POWER to cancel
 clear 
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'Plasma installed with no errors,' 6 20 
-}
-DialogGen
+read -p "Are you really sure, if you are press y"
 clear 
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'We need to remove xfce and its packages, you can reinstall xfce but i won't make that script yet' 6 20 
-}
-DialogGen
+echo Starting removal of xfce4
 clear 
-sudo apt remove xfce4* -y
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox 'KDE Plasma and Firefox should be installed. The script will reboot your device for you' 6 20 
-}
-DialogGen
-function DialogGen() { 
-dialog --title "Add/Remove Software" --msgbox '' 6 20 
-}
-DialogGen
-function DialogGen() { 
-dialog --title "Distribution Upgrades" --msgbox 'We are going to do a distribution upgrade. Lets hope this works' 6 20 
-}
-DialogGen
-sudo apt upgrade -y
- function DialogGen() { 
-dialog --title "Distribution Upgrades" --msgbox 'That hopefully did something... ' 6 20 
-}
-DialogGen 
-function DialogGen() { 
-dialog --title "Finishing Up" --msgbox 'Ok, lets finish up by rebooting and praying if this works' 6 20
-}
-DialogGen
-sudo reboot
+sudo apt remove xfce4* -y 
+clear
+echo xfce4 gone, lets install kde 
+clear
+read -p "Same as before, y to continue"
+clear
+sudo apt install kde-plasma-minimal -y 
+clear
+echo plasma minimal installed,
+clear 
+echo Lets remove chromium and install firefox
+clear 
+read -p "Same as before, press y"
+sudo apt remove chromium-browser -y && sudo apt install firefox -y 
+clear 
+echo We are done! lets reboot, if you get to a terminal, re run the script and report an issue 
